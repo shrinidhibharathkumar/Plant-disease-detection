@@ -1,9 +1,11 @@
 from ultralytics import YOLO
 
-# Load a model
-model = YOLO("models/yolo12n.pt")  # load an official model
-
-# Predict with the model
-results = model.train(data="dataset/data.yaml", epochs=10, imgsz=640)
-
-# results[0].show()
+if __name__ == "__main__":
+    # Load a model
+    model = YOLO("models/best12n.pt")  # load an official model
+    IMG_PATH = "C:\\Projects\\Plant-disease-detection\\datasets\\test\\images\\Bell-pepper-plant-JPG_jpg.rf.072ba7b994cf3600e558d28009ff6958.jpg"
+    # Predict with the model
+    # result = model.predict(IMG_PATH,device="cpu")
+    # result[0].show()
+    # model.info()
+    model.cfg
